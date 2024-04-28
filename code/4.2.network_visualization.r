@@ -1,3 +1,6 @@
+## R 4.3.2
+# /mnt/sda/Public/Environment/miniconda3/envs/sc/bin/Rscript 4.2.network_visualization.r HSC
+
 suppressMessages(library(NetBID2))
 suppressMessages(library(scMINER))
 args <- commandArgs(trailingOnly = TRUE)
