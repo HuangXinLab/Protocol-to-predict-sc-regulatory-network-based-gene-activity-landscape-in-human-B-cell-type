@@ -1,4 +1,4 @@
-# Predict-developmental-network-in-B-cell
+# Protocol-to-predict-sc-regulatory-network-based-gene-activity-landscape-during-human-B-cell-type
 ## 1.Single-cell classic plot: cell_subset_and_cell_cycle_scoring
 we utilized the Seurat R packages to analyzis biggest healthy human BM single-cell RNA sequencing dataset in human cell atlas Atlas Census of Immune Cells project. See scripts: 1.cell_subset_and_cell_cycle_scoring.R
 ## 2.network building
