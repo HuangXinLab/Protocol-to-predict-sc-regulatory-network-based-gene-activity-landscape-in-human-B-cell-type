@@ -4,7 +4,7 @@ library(scMINER)
 library(NetBID2)
 library(ggplot2)
 
-load('/mnt/sda/Public/Project/B-ALL/Bdev/activity/acs_sc')
+load('acs_sc')
 pData(acs_sc) <- filter(pData(acs_sc), pData(acs_sc)[,'scminer'] != 'ActivatedB')
 pData(acs_sc)[,'scminer'] <- droplevels(pData(acs_sc)[,'scminer'])
 load('SJARACNe/Input.eset')
@@ -44,8 +44,8 @@ feature_heatmap <- function (input_eset, target, feature = "geneSymbol", group_n
     return(hmp)
 }
 
-feature_heatmap(input_eset = input_eset, target = genes_of_interest, group_name = "cellName",save_plot = TRUE, width = 8, height = 4, name = "log2Exp", plot_name='/mnt/sda/Public/Project/B-ALL/grant/scMINER/fig/input_heatmap.pdf')
-feature_heatmap(input_eset = acs_sc, target = genes_of_interest_network, feature="ID", group_name = "scminer",save_plot = TRUE, width = 8, height = 4, name = "activity", plot_name='/mnt/sda/Public/Project/B-ALL/grant/scMINER/fig/acs_sc_heatmap.pdf')
+feature_heatmap(input_eset = input_eset, target = genes_of_interest, group_name = "cellName",save_plot = TRUE, width = 8, height = 4, name = "log2Exp", plot_name='../scMINER/fig/input_heatmap.pdf')
+feature_heatmap(input_eset = acs_sc, target = genes_of_interest_network, feature="ID", group_name = "scminer",save_plot = TRUE, width = 8, height = 4, name = "activity", plot_name='../scMINER/fig/acs_sc_heatmap.pdf')
 
 # 2.feature_vlnplot
 feature_vlnplot <- function (input_eset, target = NULL, feature = "geneSymbol", 
@@ -106,11 +106,11 @@ feature_vlnplot <- function (input_eset, target = NULL, feature = "geneSymbol",
 }
 feature_vlnplot(input_eset = input_eset, target = genes_of_interest, 
                 feature = "geneSymbol", group_by = "cellName", ylabel = "log2Exp", ncol = 1)
-ggsave('/mnt/sda/Public/Project/B-ALL/grant/scMINER/fig/input_Violin.pdf')
+ggsave('../scMINER/fig/input_Violin.pdf')
 
 feature_vlnplot(input_eset = acs_sc, target = genes_of_interest_network, 
                 feature = "ID", group_by = "scminer", ylabel = "activity", ncol = 1)
-ggsave('/mnt/sda/Public/Project/B-ALL/grant/scMINER/fig/acs_sc_Violin.pdf')
+ggsave('../scMINER/fig/acs_sc_Violin.pdf')
 
 # 3.feature_highlighting: UMAP scatter plot
 load('./B_sub.rdata')
@@ -162,8 +162,8 @@ feature_highlighting <- function (input_eset, target = NULL, feature = "geneSymb
 
 feature_highlighting(input_eset = input_eset, target = genes_of_interest, 
                      feature = "gene_short_name", ylabel = "log2Exp", x = "UMAP_1", y = "UMAP_2", pct.size = 0.5, ncol=2)
-ggsave('/mnt/sda/Public/Project/B-ALL/grant/scMINER/fig/input_feature_highlighting.pdf')
+ggsave('../scMINER/fig/input_feature_highlighting.pdf')
 
 feature_highlighting(input_eset = acs_sc, target = genes_of_interest_network, 
                      feature = "ID", ylabel = "activity", x = "UMAP_1", y = "UMAP_2", pct.size = 0.5,ncol=2)
-ggsave('/mnt/sda/Public/Project/B-ALL/grant/scMINER/fig/acs_sc_feature_highlighting.pdf')
+ggsave('../scMINER/fig/acs_sc_feature_highlighting.pdf')
