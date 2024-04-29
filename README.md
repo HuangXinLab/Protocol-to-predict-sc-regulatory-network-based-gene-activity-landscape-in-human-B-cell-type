@@ -1,6 +1,6 @@
 # Protocol-to-predict-sc-regulatory-network-based-gene-activity-landscape-during-human-B-cell-type
 ## 1.Single-cell classic plot: cell_subset_and_cell_cycle_scoring
-The human bone marrow (BM) data was sourced from the immune cell section of the Human Cell Atlas. We utilize Seurat v4.1.0 51 for single-cell data processing and removal of low-quality cells. Subsequent to standard single-cell data analysis and B cell annotation. See scripts: 1.cell_subset_and_cell_cycle_scoring.R
+The human bone marrow (BM) data was sourced from the immune cell section of the Human Cell Atlas. We utilized Seurat for single-cell data processing and removal of low-quality cells. Subsequent to standard single-cell data analysis and B cell annotation. See scripts: 1.cell_subset_and_cell_cycle_scoring.R
 ## 2.network building
 We used SJARACNe algorithm to facilitate the reconstruction of cell-type-specific interactomes for each B cell type(HSC, CLP, Pre-pro-B, Pro-B, Pre-B, Immature B, Mature B, and Plasma cells) from the scRNA-seq profiles present in the Human Cell Atlas Immune Cells study, generating separate TF and SIG networks respectively. See scripts: 2.1.generateSJARACNeInput.R; 2.2.generateSJARACNenetwork.sh
 ## 3.infer activity
