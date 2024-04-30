@@ -4,6 +4,6 @@ The human bone marrow (BM) data were sourced from the immune cell section of the
 ## 2.network building
 We used the SJARACNe algorithm to reconstruct cell-type-specific interactomes for each B cell type (HSC, CLP, Pre-pro-B, Pro-B, Pre-B, Immature B, Mature B, and Plasma cells) from the scRNA-seq profiles in the Human Cell Atlas Immune Cells study. This generated separate TF and SIG networks. See scripts: 2.1.generateSJARACNeInput.R; 2.2.generateSJARACNenetwork.sh
 ## 3.infer activity
-We employed NetBID2 and scMINER to analyze the networks, identifying putative drivers of B cell developmental states. See scripts: 3.GetActivityFromSJARACNe.R
+We employed NetBID2 and scMINER to analyze the networks and identify the activity of drivers in different B cell developmental states. See scripts: 3.GetActivityFromSJARACNe.R
 ## 4.visualization
-For the network-based activity of TF and SIG drivers inferred by NetBID2 and scMINER, we used different visualization methods for display. See scripts: 4.1.visualization.R; 4.2.network_visualization.R
+For the network-based activity of TF and SIG drivers inferred by NetBID2 and scMINER, we utilized various visualization methods for display. See scripts: 4.1.visualization.R; 4.2.network_visualization.R
