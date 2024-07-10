@@ -1,5 +1,5 @@
 # Protocol-to-predict-sc-regulatory-network-based-gene-activity-landscape-in-human-B-cell-type
-## 1.Single-cell analyze
+## 1.Single-cell RNA-seq analyze
 The human bone marrow (BM) data were sourced from the immune cell section of the Human Cell Atlas. We utilized Seurat for single-cell data processing, removal of low-quality cells, and standard single-cell data analysis, including B cell annotation. See scripts: 1.1.BM_data_download_and_clearn_up.R; 1.2.B_cells_analyze.R
 ## 2.network building
 We used the SJARACNe algorithm to reconstruct cell-type-specific interactomes for each B cell type (HSC, CLP, Pre-pro-B, Pro-B, Pre-B, Immature B, Mature B, and Plasma cells) from the scRNA-seq profiles in the Human Cell Atlas Immune Cells study. This generated separate TF and SIG networks. See scripts: 2.1.generateSJARACNeInput.R; 2.2.generateSJARACNenetwork.sh
