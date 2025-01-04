@@ -1,3 +1,4 @@
+##R version 4.3.2
 
 folder2do <- list.dirs( 'SJARACNe', recursive = FALSE)
 cmd <- lapply( c( 'TF', 'SIG'), function( type_1) {
